@@ -4,7 +4,7 @@
 
 События $A$ и $B$ называются \textbf{несовместными}, если $AB = \emptyset$.
 
-События $A_1, ..., A_n$ называются \textbf{попарно несовместными}, если $A_iA_j = \emptyset$ при $i \neq j, 1, j = \overline{1, n}$.
+События $A_1, ..., A_n$ называются \textbf{попарно несовместными}, если $A_iA_j = \emptyset$ при $i \neq j, i, j = \overline{1, n}$.
 
 События $A_1, ..., A_n$ называются \textbf{несовместными в совокупности}, если $A_1 \cdot ... \cdot A_n = \emptyset$.
 
@@ -66,7 +66,7 @@ $\mathcal{B}$ называется \textbf{сигма-алгеброй} собы
 	\item Если $A \subseteq B, \text{то} P(A) \leq P(B)$;
 	\item $\forall A \in \mathcal{B}: 0 \leq P(A) \leq 1$;
 	\item $\forall \forall A, B \in \mathcal{B}: P(A + B) = P(A) + P(B) - P(AB)$;
-	\item $\forall \forall A_1, ..., A_n \in \mathcal{B}: P(A_1 + ... + A_n) = \sum_{i_1=1}^n (A_{i1}) - \sum_{1 \leq i_1 < i_2 \leq n} (A_{i1}A_{i2}) + \sum_{1 \leq i_1 < i_2 < i_3 \leq n} (A_{i1}A_{i2}A_{i3}) - ... + (-1)^{n-1}P(A_1 ... A_n)$.
+	\item $\forall \forall A_1, ..., A_n \in \mathcal{B}: P(A_1 + ... + A_n) = \sum_{i_1=1}^n P(A_{i1}) - \sum_{1 \leq i_1 < i_2 \leq n} P(A_{i1}A_{i2}) + \sum_{1 \leq i_1 < i_2 < i_3 \leq n} P(A_{i1}A_{i2}A_{i3}) - ... + (-1)^{n-1}P(A_1 ... A_n)$.
 \end{enumerate}
 
 \section{Записать аксиому сложения вероятностей, расширенную аксиому сложения вероятностей и аксиому непрерывности вероятности. Как они связаны между собой?}
@@ -106,7 +106,7 @@ $\mathcal{B}$ называется \textbf{сигма-алгеброй} собы
 	\item $P(A_1 \cdot ... \cdot A_{n-1}) > 0$.
 \end{enumerate}
 
-Тогда: $P(A_1 \cdot ... \cdot A_n) = P(A_2 | A_1) \cdot P(A_3 | A_1A_2) \cdot ... \cdot P(A_{n} | A_1 ... A_{n-1})$.
+Тогда: $P(A_1 \cdot ... \cdot A_n) = P(A_1) \cdot P(A_2 | A_1) \cdot P(A_3 | A_1A_2) \cdot ... \cdot P(A_{n} | A_1 ... A_{n-1})$.
 
 \section{Сформулировать определение пары независимых событий. Как независимость двух событий связана с условными вероятностями их осуществления?}
 
