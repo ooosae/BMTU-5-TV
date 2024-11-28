@@ -54,7 +54,7 @@ $\mathcal{B}$ называется \textbf{сигма-алгеброй} собы
 
 \textbf{Вероятностью} (вероятностной мерой) называют функцию: $P: \mathcal{B} \rightarrow \mathbb{R}$, обладающую следующими свойствами, которые называются \textbf{аксиомами вероятности}:
 \begin{enumerate}
-	\item (аксиома неотрицательности) $\forall A \in B: P(A) \geq 0$;
+	\item (аксиома неотрицательности) $\forall A \in \mathcal{B}: P(A) \geq 0$;
 	\item (аксиома нормированности) $P(\Omega) = 1$;
 	\item (расширенная аксиома сложения) Если $A_1, ..., A_n, ...$ -- попарно несовместные события, то $P(A_1 + ... + A_n + ...) = P(A_1) + ... + P(A_n) + ...$.
 \end{enumerate}
@@ -274,7 +274,7 @@ $\mathcal{B}$ называется \textbf{сигма-алгеброй} собы
 
 \textbf{Вероятностью} (вероятностной мерой) называют функцию: $P: \mathcal{B} \rightarrow \mathbb{R}$, обладающую следующими свойствами, которые называются \textbf{аксиомами вероятности}:
 \begin{enumerate}
-	\item (аксиома неотрицательности) $\forall A \in B: P(A) \geq 0$;
+	\item (аксиома неотрицательности) $\forall A \in \mathcal{B}: P(A) \geq 0$;
 	\item (аксиома нормированности) $P(\Omega) = 1$;
 	\item (расширенная аксиома сложения) Если $A_1, ..., A_n$ -- попарно несовместные события, то $P(A_1 + ... + A_n + ...) = P(A_1) + ... + P(A_n) + ...$.
 \end{enumerate}
@@ -311,7 +311,7 @@ $\mathcal{B}$ называется \textbf{сигма-алгеброй} собы
 \textbf{Свойства}:
 \begin{enumerate}
 	\item $\forall \forall A, B \in \mathcal{B}: P(A + B) = P(A) + P(B) - P(AB)$;
-	\item $\forall \forall A_1, ..., A_n \in \mathcal{B}: P(A_1 + ... + A_n) = \sum_{i_1=1}^n (A_{i1}) - \sum_{1 \leq i_1 < i_2 \leq n} (A_{i1}A_{i2}) + \sum_{1 \leq i_1 < i_2 < i_3 \leq n} (A_{i1}A_{i2}A_{i3}) - ... + (-1)^{n-1}P(A_1 ... A_n)$.
+	\item $\forall \forall A_1, ..., A_n \in \mathcal{B}: P(A_1 + ... + A_n) = \sum_{i_1=1}^n (A_{i_1}) - \sum_{1 \leq i_1 < i_2 \leq n} (A_{i_1}A_{i_2}) + \sum_{1 \leq i_1 < i_2 < i_3 \leq n} (A_{i_1}A_{i_2}A_{i_3}) - ... + (-1)^{n-1}P(A_1 ... A_n)$.
 \end{enumerate}
 
 \textbf{Доказательство}:
@@ -340,7 +340,7 @@ $\mathcal{B}$ называется \textbf{сигма-алгеброй} собы
 \begin{enumerate}
 	\item $P(A|B) = \frac{P(AB)^{\geq 0 \text{(акс. неотр.)}}}{P(B)^{> 0}} \geq 0$;
 	\item $P(\Omega | B) = \frac{P(\Omega B)}{P(B)} = \zigzagline \Omega B = B \zigzagline= \frac{P(B)}{P(B)} = 1$;
-	\item Пусть $A_1, ..., A_n, ...$ -- попарно несовместные события. $P(A_1, ..., A_n, ... | B) = \frac {P((A_1 + ... + A_n + ...)B)}{P(B)} = \zigzagline \text{счетная дистрибутивность пересечения относительно объединения} \zigzagline = \frac{P(A_1B + ... + A_nB + ...)}{P(B)} = \zigzagline A_iB \subseteq A_i. \text{ Т.к. } A_i, i \in \mathbb{N} \text{ попарно несовместны, то и } A_iB, i \in \mathbb{N} \text{ также будут попарно несовместны } \zigzagline = \zigzagline \text{акс. 3} \zigzagline = \frac{P(A_1B) + ... + P(A_nB) + ...}{P(B)} = \frac{P(A_1B)}{P(B)} + ... + \frac{P(A_nB)}{P(B)} + ... = P(A_i | B) + ... + P(A_n | B) + ...$. 
+	\item Пусть $A_1, ..., A_n, ...$ -- попарно несовместные события. $P(A_1, ..., A_n, ... | B) = \frac {P((A_1 + ... + A_n + ...)B)}{P(B)} = \zigzagline \text{счетная дистрибутивность пересечения относительно объединения} \zigzagline = \frac{P(A_1B + ... + A_nB + ...)}{P(B)} = \zigzagline A_iB \subseteq A_i. \text{ Т.к. } A_i, i \in \mathbb{N} \text{ попарно несовместны, то и } A_iB, i \in \mathbb{N} \text{ также будут попарно несовместны } \zigzagline = \zigzagline \text{акс. 3} \zigzagline = \frac{P(A_1B) + ... + P(A_nB) + ...}{P(B)} = \frac{P(A_1B)}{P(B)} + ... + \frac{P(A_nB)}{P(B)} + ... = P(A_1 | B) + ... + P(A_n | B) + ...$. 
 \end{enumerate}
 
 \section{Доказать теоремы о формулах умножения вероятностей для двух событий и для произвольного числа событий.}
@@ -351,11 +351,11 @@ $\mathcal{B}$ называется \textbf{сигма-алгеброй} собы
 
 Теорема о формуле умножения вероятностей \textbf{для $n$ событий}. Пусть:
 \begin{enumerate}
-	\item $A_i, ..., A_n$ -- события;
+	\item $A_1, ..., A_n$ -- события;
 	\item $P(A_1 \cdot ... \cdot A_{n-1}) > 0$.
 \end{enumerate}
 
-Тогда: $P(A_1 \cdot ... \cdot A_n) = P(A_2 | A_1) \cdot P(A_3 | A_1A_2) \cdot ... \cdot P(A_{n} | A_1 ... A_{n-1})$.
+Тогда: $P(A_1 \cdot ... \cdot A_n) = P(A_1) \cdot P(A_2 | A_1) \cdot P(A_3 | A_1A_2) \cdot ... \cdot P(A_{n} | A_1 ... A_{n-1})$.
 
 \textbf{Доказательство}. 1) $\forall k \in \{1, ..., n - 1\} : A_1 \cdot ... \cdot A_{n-1} \subseteq A_1 \cdot ... \cdot A_{k-1} \Rightarrow (A_1 \cdot ... \cdot A_k)(A_{k+1} \cdot ... \cdot A_{n-1}) \subseteq A_1 \cdot ... \cdot A_k \Rightarrow P(A_1 \cdot ... \cdot A_{n-1}) \leq P(A_1 \cdot ... \cdot A_k) \Rightarrow \forall k \in \{1, ..., n-1\}: P(A_1 \cdot ... \cdot A_k) > 0$. 2) $P(A_1 \cdot ... \cdot A_{n-1} \cdot A_n) = \zigzagline P(AB) = P(A)P(B|A) \zigzagline = P(A_1 \cdot ... \cdot A_{n-2} \cdot A_{n-1})P(A_n|A_1 \cdot ... \cdot A_{n-1}) = \zigzagline \text{ф-ла умножения вероятностей для двух событий} \zigzagline = P(A_1 \cdot ... \cdot A_{n-2}) \cdot P(A_{n-1}|A_1 \cdot ... \cdot A_{n-2}) \cdot P(A_n | A_1 \cdot ... \cdot A_{n-1}) = ... = P(A_1) \cdot P(A_2 |A_2) \cdot ... \cdot P(A_n | A_1 \cdot ... \cdot A_{n-1}).$
 
@@ -379,7 +379,7 @@ Th.
 
 События $A_1, ..., A_n$ называются \textbf{попарно независимыми}, если $\forall \forall i, j \in \{1, ..., n\}, i \neq j$, события $A_i, A_j$ -- независимые, т.е.: $P(A_iA_j) = P(A_i)P(A_j), i, j = \overline{1, n}, i \neq j.$
 
-События $A_1, ..., A_n$ называются \textbf{независимыми в совокупности}, если $\forall k \in \{2, ..., n\} \forall \forall i_1, ..., i_k \in \{1, ... n\} \text{ таких, что } i_1 < i_2 < ... < i_k \text{ выполняется } P(A_{i1} \cdot ... \cdot A_{ik}) = P(A_{i1}) \cdot ... \cdot P(A_{ik}).$
+События $A_1, ..., A_n$ называются \textbf{независимыми в совокупности}, если $\forall k \in \{2, ..., n\} \forall \forall i_1, ..., i_k \in \{1, ... n\} \text{ таких, что } i_1 < i_2 < ... < i_k \text{ выполняется } P(A_{i_1} \cdot ... \cdot A_{i_k}) = P(A_{i_1}) \cdot ... \cdot P(A_{i_k}).$
 
 $A_1, ..., A_n \text{ --независимые в совокупности} \Rightarrow A_1, ..., A_n \text{ -- попарно независимые}$. Обратное неверно.
 
@@ -388,7 +388,7 @@ $A_1, ..., A_n \text{ --независимые в совокупности} \Rig
 	\item $P(A_1) = \frac{1}{2} = P(A_2) = P(A_3)$;
 	\item $P(A_1A_2) = \zigzagline A_1A_2 = \{\text{на нижней грани есть и 1 и 2 рядом}\} \zigzagline = \frac{1}{4} = P(A_1A_3) = P(A_2A_3)$;
 	\item $P(A_1A_2A_3) = \frac{1}{4}$;
-	\item $P(A_1A_2) = \frac{1}{4} = P(A_1)P(A_2), P(A_1A_3) = \frac{1}{4} = P(A_1)P(A_3), P(A_2A_32) = \frac{1}{4} = P(A_2)P(A_3) \Rightarrow A_1, A_2, A_3 \text{ -- попарно независимые}$;
+	\item $P(A_1A_2) = \frac{1}{4} = P(A_1)P(A_2), P(A_1A_3) = \frac{1}{4} = P(A_1)P(A_3), P(A_2A_3) = \frac{1}{4} = P(A_2)P(A_3) \Rightarrow A_1, A_2, A_3 \text{ -- попарно независимые}$;
 	\item $P(A_1A_2A_3) = P(A_1)P(A_2)P(A_3) \text{ -- неверно!} \Rightarrow A_1, A_2, A_3$ -- \textbf{не} являются независимыми в совокупности.
 \end{enumerate}
 
