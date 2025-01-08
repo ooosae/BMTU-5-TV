@@ -143,34 +143,34 @@
 Пусть:
 \begin{enumerate}[label=\arabic*)]
 	\item $\Omega$ -- пространство элементарных исходов некоторого случайного эксперимента;
-	\item $\beta \neq \emptyset$ -- набор подмножеств в множестве $\Omega$.
+	\item $\mathcal{B} \neq \emptyset$ -- набор подмножеств в множестве $\Omega$.
 \end{enumerate}
 
-Тогда $\beta$ называется сигма--алгеброй событий, если выполнены условия:
+Тогда $\mathcal{B}$ называется сигма--алгеброй событий, если выполнены условия:
 
 \begin{enumerate}[label=\arabic*)]
-	\item Если $A \in \beta$, то $\overline{A} \in \beta$;
-	\item Если $A_1, ..., A_n, ... \in \beta$, то $A_1 + ... + A_n + ... \in \beta$.
+	\item Если $A \in \mathcal{B}$, то $\overline{A} \in \mathcal{B}$;
+	\item Если $A_1, ..., A_n, ... \in \mathcal{B}$, то $A_1 + ... + A_n + ... \in \mathcal{B}$.
 \end{enumerate}
 
 \subsection*{Простейшие свойства}
 
 \begin{enumerate}
-	\item $\Omega \in \beta$.
+	\item $\Omega \in \mathcal{B}$.
 	
-	\textbf{Доказательство.} $\beta \neq \emptyset$ -- по определению $\Rightarrow$ $\exists A \subseteq \Omega: A \in \beta$ $\Rightarrow$ (аксиома 1) $\overline{A} \in \beta$ $\Rightarrow$ (аксиома 2) $A + \overline{A} \in \beta$. Т. к. $A + \overline{A} = \Omega$ $\Rightarrow$ $\Omega \in \beta$.
+	\textbf{Доказательство.} $\mathcal{B} \neq \emptyset$ -- по определению $\Rightarrow$ $\exists A \subseteq \Omega: A \in \mathcal{B}$ $\Rightarrow$ (аксиома 1) $\overline{A} \in \mathcal{B}$ $\Rightarrow$ (аксиома 2) $A + \overline{A} \in \mathcal{B}$. Т. к. $A + \overline{A} = \Omega$ $\Rightarrow$ $\Omega \in \mathcal{B}$.
 	
-	\item $\emptyset \in \beta$.
+	\item $\emptyset \in \mathcal{B}$.
 	
-	\textbf{Доказательство.} Т. к. $\Omega \in \beta$ $\Rightarrow$ (аксиома 1) $\overline{\Omega} \in \beta, \overline{\Omega} = \emptyset \Rightarrow \emptyset \in \beta$.
+	\textbf{Доказательство.} Т. к. $\Omega \in \mathcal{B}$ $\Rightarrow$ (аксиома 1) $\overline{\Omega} \in \mathcal{B}, \overline{\Omega} = \emptyset \Rightarrow \emptyset \in \mathcal{B}$.
 	
-	\item Если $A_1, ..., A_n, ... \in \beta$, то $A_1 \cdot ... \cdot A_n \cdot ... \in \beta$.
+	\item Если $A_1, ..., A_n, ... \in \mathcal{B}$, то $A_1 \cdot ... \cdot A_n \cdot ... \in \mathcal{B}$.
 	
-	\textbf{Доказательство.} Т. к.  $A_1, ..., A_n, ... \in \beta \Rightarrow$ (аксиома 1) $\overline{A_1}, ...,\overline{A_n}, ... \in \beta \Rightarrow$ (аксиома 2) $\overline{A_1}~+~...~+~\overline{A_n}~+~...~\in~\beta \Rightarrow$ (аксиома 1) $\Rightarrow \overline{\overline{A_1} + ... +\overline{A_n} + ...} \in \beta \Rightarrow$ (по закону Де Моргана) $\overline{\overline{A_1}} \cdot ... \cdot \overline{\overline{A_n}} \cdot~...~\in~\beta \Rightarrow A_1 \cdot ... \cdot A_n \cdot ... \in \beta$.
+	\textbf{Доказательство.} Т. к.  $A_1, ..., A_n, ... \in \mathcal{B} \Rightarrow$ (аксиома 1) $\overline{A_1}, ...,\overline{A_n}, ... \in \mathcal{B} \Rightarrow$ (аксиома 2) $\overline{A_1}~+~...~+~\overline{A_n}~+~...~\in~\mathcal{B} \Rightarrow$ (аксиома 1) $\Rightarrow \overline{\overline{A_1} + ... +\overline{A_n} + ...} \in \mathcal{B} \Rightarrow$ (по закону Де Моргана) $\overline{\overline{A_1}} \cdot ... \cdot \overline{\overline{A_n}} \cdot~...~\in~\mathcal{B} \Rightarrow A_1 \cdot ... \cdot A_n \cdot ... \in \mathcal{B}$.
 	
-	\item Если $A, B \in \beta$, то $A \setminus B \in \beta$.
+	\item Если $A, B \in \mathcal{B}$, то $A \setminus B \in \mathcal{B}$.
 	
-	\textbf{Доказательство.} Из свойств операций над множествами: $A \setminus B = A \cdot \overline{B}$. $B \in \beta \Rightarrow$ (aксиома 1) $\overline{B} \in \beta \Rightarrow A, \overline{B} \in \beta \Rightarrow$ (свойство 3) $A \cdot \overline{B} \in \beta \Rightarrow A \setminus B \in \beta$.
+	\textbf{Доказательство.} Из свойств операций над множествами: $A \setminus B = A \cdot \overline{B}$. $B \in \mathcal{B} \Rightarrow$ (aксиома 1) $\overline{B} \in \mathcal{B} \Rightarrow A, \overline{B} \in \mathcal{B} \Rightarrow$ (свойство 3) $A \cdot \overline{B} \in \mathcal{B} \Rightarrow A \setminus B \in \mathcal{B}$.
 \end{enumerate}
 
 \subsection*{Аксиоматическое определение вероятности}
@@ -178,13 +178,13 @@
 Пусть:
 \begin{enumerate}[label=\arabic*)]
 	\item $\Omega$ -- пространство элементарных исходов некоторого случайного эксперимента;
-	\item $\beta$ -- сигма--алгебра на $\Omega$.
+	\item $\mathcal{B}$ -- сигма--алгебра на $\Omega$.
 \end{enumerate}
 
-Тогда вероятностью (вероятностной мерой) называется функция $P: \beta \rightarrow \mathbb{R}$ обладающая следующими свойствами: 
+Тогда вероятностью (вероятностной мерой) называется функция $P: \mathcal{B} \rightarrow \mathbb{R}$ обладающая следующими свойствами: 
 
 \begin{enumerate}[label=\arabic*)]
-	\item $\forall A \in \beta \Rightarrow P(A) \geq 0$ (аксиома неотрицательности);
+	\item $\forall A \in \mathcal{B} \Rightarrow P(A) \geq 0$ (аксиома неотрицательности);
 	\item $P(\Omega) = 1$ (аксиома нормированности);
 	\item если $A_1, ..., A_n,...$ -- попарно несовместные события, то $P(A_1 +...+A_n +...) = P(A_1)+...+P(A_n)+...$ (расширенная аксиома сложения).
 \end{enumerate}
@@ -212,14 +212,14 @@
 Пусть:
 \begin{enumerate}[label=\arabic*)]
 	\item $\Omega$ -- пространство элементарных исходов некоторого случайного эксперимента;
-	\item $\beta \neq \emptyset$ -- набор подмножеств в множестве $\Omega$.
+	\item $\mathcal{B} \neq \emptyset$ -- набор подмножеств в множестве $\Omega$.
 \end{enumerate}
 
-Тогда $\beta$ называется сигма--алгеброй событий, если выполнены условия:
+Тогда $\mathcal{B}$ называется сигма--алгеброй событий, если выполнены условия:
 
 \begin{enumerate}[label=\arabic*)]
-	\item Если $A \in \beta$, то $\overline{A} \in \beta$;
-	\item Если $A_1, ..., A_n, ... \in \beta$, то $A_1 + ... + A_n + ... \in \beta$.
+	\item Если $A \in \mathcal{B}$, то $\overline{A} \in \mathcal{B}$;
+	\item Если $A_1, ..., A_n, ... \in \mathcal{B}$, то $A_1 + ... + A_n + ... \in \mathcal{B}$.
 \end{enumerate}
 
 \subsection*{Аксиоматическое определение вероятности}
@@ -227,13 +227,13 @@
 Пусть:
 \begin{enumerate}[label=\arabic*)]
 	\item $\Omega$ -- пространство элементарных исходов некоторого случайного эксперимента;
-	\item $\beta$ -- сигма--алгебра на $\Omega$.
+	\item $\mathcal{B}$ -- сигма--алгебра на $\Omega$.
 \end{enumerate}
 
-Тогда вероятностью (вероятностной мерой) называется функция $P: \beta \rightarrow \mathbb{R}$ обладающая следующими свойствами: 
+Тогда вероятностью (вероятностной мерой) называется функция $P: \mathcal{B} \rightarrow \mathbb{R}$ обладающая следующими свойствами: 
 
 \begin{enumerate}[label=\arabic*)]
-	\item $\forall A \in \beta \Rightarrow P(A) \geq 0$ (аксиома неотрицательности);
+	\item $\forall A \in \mathcal{B} \Rightarrow P(A) \geq 0$ (аксиома неотрицательности);
 	\item $P(\Omega) = 1$ (аксиома нормированности);
 	\item если $A_1, ..., A_n,...$ -- попарно несовместные события, то $P(A_1 +...+A_n +...) = P(A_1)+...+P(A_n)+...$ (расширенная аксиома сложения).
 \end{enumerate}
@@ -243,7 +243,7 @@
 \begin{enumerate}
 	\item $P(\overline{A}) = 1 - P(A)$.
 	
-	\textbf{Доказательство.} $A + \overline{A} \in \beta$ (аксиома 2 сигма--алгебры), $A + \overline{A} = \Omega$ $\Rightarrow$ (по свойству вероятностей) $P(\Omega) = 1 = P(A + \overline{A}) \Rightarrow$ т. к. $A, \overline{A}$ -- несовместны, то $P(A + \overline{A}) = P(A) + P(\overline{A}) \Rightarrow P(A) + P(\overline{A}) = 1 \Rightarrow P(\overline{A}) = 1 - P(A)$.
+	\textbf{Доказательство.} $A + \overline{A} \in \mathcal{B}$ (аксиома 2 сигма--алгебры), $A + \overline{A} = \Omega$ $\Rightarrow$ (по свойству вероятностей) $P(\Omega) = 1 = P(A + \overline{A}) \Rightarrow$ т. к. $A, \overline{A}$ -- несовместны, то $P(A + \overline{A}) = P(A) + P(\overline{A}) \Rightarrow P(A) + P(\overline{A}) = 1 \Rightarrow P(\overline{A}) = 1 - P(A)$.
 	
 	\item $P(\emptyset) = 0$.
 	
@@ -253,11 +253,11 @@
 	
 	\textbf{Доказательство.} $A \subseteq B \Rightarrow B = A + (B \setminus A)$. Тогда $P(B) = P(A + (B \setminus A)) =$ ($A, B \setminus A$ -- несовместны, аксиома 3) $=P(A) + P(B \setminus A) \geq P(A) \Rightarrow P(B) \geq P(A)$.
 	
-	\item $\forall A \in \beta: 0 \leq P(A) \leq 1$.
+	\item $\forall A \in \mathcal{B}: 0 \leq P(A) \leq 1$.
 	
 	\textbf{Доказательство.} $P(A) \geq 0$ -- из аксиомы 1. $\forall A: A \subseteq \Omega \Rightarrow$~(свойство 3)~$P(A) \leq P(\Omega) \Rightarrow$~(свойство 2)~$P(A) \leq 1$.
 	
-	\item $P(A + B) = P(A) + P(B) - P(AB)$, где $A, B \in \beta$.
+	\item $P(A + B) = P(A) + P(B) - P(AB)$, где $A, B \in \mathcal{B}$.
 	
 	\textbf{Доказательство.} $\forall\forall A, B:$ 
 	
@@ -389,9 +389,9 @@ $P(A) = P(A_1A_2A_3) = P(A_1) \cdot P(A_2|A_1) \cdot P(A_3|A_1A_2) = \frac{1}{7}
 
 \section{Сформулировать определение полной группы событий. Доказать теоремы о формуле полной вероятности и о формуле Байеса. Понятия априорной и апостериорной вероятностей.}
 
-Пусть $\Omega$ -- пространство элементарных исходов, связанных с некоторым случайным экспериментом, а $(\Omega, \beta, P)$ -- вероятностное пространство этого случайного эксперимента.
+Пусть $\Omega$ -- пространство элементарных исходов, связанных с некоторым случайным экспериментом, а $(\Omega, \mathcal{B}, P)$ -- вероятностное пространство этого случайного эксперимента.
 
-Говорят, что события $H_1, ..., H_n \in \beta$ образуют полную группу событий, если:
+Говорят, что события $H_1, ..., H_n \in \mathcal{B}$ образуют полную группу событий, если:
 \begin{enumerate}[label=\arabic*)]
 	\item $P(H_i) > 0, i = \overline{1, n}$;
 	\item $H_iH_j = \emptyset, i \neq j$;
@@ -404,7 +404,7 @@ $P(A) = P(A_1A_2A_3) = P(A_1) \cdot P(A_2|A_1) \cdot P(A_3|A_1A_2) = \frac{1}{7}
 \begin{enumerate}
 	\item $H_1, ..., H_n$ -- полная группа событий.
 	\item $P(H_i)>0, i = \overline{1,n}$.
-	\item $A \in \beta$ -- событие.
+	\item $A \in \mathcal{B}$ -- событие.
 \end{enumerate}
 Тогда $P(A) = P(A|H_1)P(H_1)+...+P(A|H_n)P(H_n)$.
 
@@ -415,7 +415,7 @@ $P(A) = P(A_1A_2A_3) = P(A_1) \cdot P(A_2|A_1) \cdot P(A_3|A_1A_2) = \frac{1}{7}
 Пусть: 
 \begin{enumerate}
 	\item Выполнены условия теоремы о формуле полной вероятности.
-	\item $A \in \beta: P(A) > 0$.
+	\item $A \in \mathcal{B}: P(A) > 0$.
 \end{enumerate}
 Тогда $P(H_i|A) = \frac{P(A|H_i)P(H_i)}{P(A|H_1)P(H_1)+...+P(A|H_n)P(H_n)} = \frac{P(A|H_i)P(H_i)}{P(A)}, i = \overline{1, n}$.
 
